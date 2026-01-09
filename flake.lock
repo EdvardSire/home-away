@@ -1,0 +1,48 @@
+{
+  "nodes": {
+    "edvard-dotfiles": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1763044417,
+        "narHash": "sha256-zJb3pSSRd953mHx0yALUROpPxiuVd2c53tTTgzzDkyo=",
+        "owner": "edvardsire",
+        "repo": "dotfiles",
+        "rev": "5bbf88cef6aa613f9b0ea8bfeed48117d06e6024",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edvardsire",
+        "repo": "dotfiles",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1767051569,
+        "narHash": "sha256-0MnuWoN+n1UYaGBIpqpPs9I9ZHW4kynits4mrnh1Pk4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "40ee5e1944bebdd128f9fbada44faefddfde29bd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "edvard-dotfiles": "edvard-dotfiles",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
