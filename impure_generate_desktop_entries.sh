@@ -1,5 +1,11 @@
 location="$HOME/.local/share/applications"
-entries=("sioyek" "QGroundControl")
+entries=(
+    "sioyek"
+    "QGroundControl"
+    "thunderbird"
+    "librewolf"
+    "vlc"
+)
 
 mkdir -p "$location"
 

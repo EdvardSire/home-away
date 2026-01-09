@@ -6,4 +6,5 @@ with pkgs;
   qgroundcontrol
   thunderbird
   librewolf
+  vlc
 ]
