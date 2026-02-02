@@ -62,7 +62,7 @@ popd
 
 echo "==> Install nix profile"
 pushd "$HOME/$DEST_DIR/$REPO_NAME"
-nix profile install .
+nix profile add .
 popd
 
 
