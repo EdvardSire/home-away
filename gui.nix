@@ -1,4 +1,4 @@
-{ pkgs }:
+{ pkgs, system }:
 
 with pkgs;
 [
@@ -6,5 +6,20 @@ with pkgs;
   qgroundcontrol
   thunderbird
   librewolf
+  # firefox
   vlc
+  tigervnc
+  eog
+  binaryninja-free
+] ++ [
+  geeqie
+  qgis-ltr
+  imhex
+  wireshark
+#] ++ [
+#  (import ./plotjuggler.nix { inherit pkgs system; } )
+] ++ [
+  _1password-gui
+] ++ [
+  pika-backup
 ]

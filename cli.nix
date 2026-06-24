@@ -17,4 +17,14 @@ with pkgs;
   nixfmt-rfc-style
   v4l-utils
   linuxPackages_latest.perf
+  # sshfs
+  tmux
+] ++ [
+  fzf
+  jq
+  ripgrep
+  devcontainer
+  smem
+] ++ [
+  nnn
 ]
