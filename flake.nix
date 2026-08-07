@@ -27,7 +27,7 @@
         let
           pkgs = import nixpkgs {
             inherit system;
-            config = { };
+            config = { allowUnfree = true; };
           };
           graphics-drivers = import ./graphics-drivers.nix { inherit pkgs; };
         in
@@ -36,7 +36,7 @@
             name = "package env";
             paths =
               (import ./cli.nix { inherit pkgs; })
-              ++ (import ./gui.nix { inherit pkgs; })
+              ++ (import ./gui.nix { inherit pkgs system; })
               ++ [
                 edvard-dotfiles.packages.${system}.neovim
                 edvard-dotfiles.packages.${system}.q-cli

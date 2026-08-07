@@ -1,10 +1,18 @@
 location="$HOME/.local/share/applications"
+
 entries=(
     "sioyek"
     "QGroundControl"
     "thunderbird"
-    "librewolf"
+    "firefox"
     "vlc"
+    "vncviewer"
+    "geeqie"
+    "qgis"
+    "imhex"
+    "wireshark"
+    "1password"
+    "pika-backup"
 )
 
 mkdir -p "$location"

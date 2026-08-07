@@ -15,6 +15,8 @@ with pkgs;
   xxd
   file
   fzf
+  jq
+  smem
 ] ++ [
   # improve shell
   zoxide
