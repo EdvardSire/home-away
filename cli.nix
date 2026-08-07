@@ -2,19 +2,34 @@
 
 with pkgs;
 [
+  # basic cli
+  nmap
+  iperf3
+  ripgrep
+  v4l-utils
+  perf
+  moreutils
+  zip
+  unzip
+  sqlite-interactive
+  xxd
+  file
+  fzf
+] ++ [
+  # improve shell
+  zoxide
+] ++ [
+  # git
   git
   git-lfs
-  htop
-  xsel
   lazygit
+] ++ [
+  # tui
+  htop
   tree
   ncdu
-  moreutils
-  nmap
-  zoxide
   lf
-  iperf3
+] ++ [
+  # language tooling
   nixfmt-rfc-style
-  v4l-utils
-  linuxPackages_latest.perf
 ]

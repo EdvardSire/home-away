@@ -41,7 +41,8 @@
                 edvard-dotfiles.packages.${system}.neovim
                 edvard-dotfiles.packages.${system}.q-cli
               ]
-              ++ [ graphics-drivers ];
+              # ++ [ graphics-drivers ]
+              ;
           };
         }
       );
