@@ -1,22 +1,24 @@
 { pkgs }:
 
 with pkgs;
-[
-  # basic cli
-  nmap
-  iperf3
-  ripgrep
-  v4l-utils
-  perf
-  moreutils
-  zip
-  unzip
-  sqlite-interactive
-  xxd
+[ # cli
+  ## coreutils++
   file
   fzf
   jq
+  ripgrep
+  moreutils
+  zip
+  unzip
+  xxd
   smem
+
+  ## utils
+  iperf3
+  perf
+  nmap
+  v4l-utils
+  unison
 ] ++ [
   # improve shell
   zoxide
@@ -31,6 +33,7 @@ with pkgs;
   tree
   ncdu
   lf
+  sqlite-interactive
 ] ++ [
   # language tooling
   nixfmt-rfc-style
