@@ -15,22 +15,22 @@ in
 with pkgs;
 [
   sioyekWrapped
-  qgroundcontrol
-  thunderbird
+  # qgroundcontrol
+  # thunderbird
   librewolf # firefox
   vlc
-  tigervnc
-  eog
-  binaryninja-free
+  # tigervnc
+  # eog
+  # binaryninja-free
 ] ++ [
-  geeqie
-  qgis-ltr
-  imhex
-  wireshark
+  # geeqie
+  # qgis-ltr
+  # imhex
+  # wireshark
 #] ++ [
 #  (import ./plotjuggler.nix { inherit pkgs system; } )
 ] ++ [
-  _1password-gui
+  # _1password-gui
 ] ++ [
-  pika-backup
+  # pika-backup
 ]

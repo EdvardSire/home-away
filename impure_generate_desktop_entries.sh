@@ -2,9 +2,7 @@ location="$HOME/.local/share/applications"
 
 entries=(
     "sioyek"
-    "QGroundControl"
-    "thunderbird"
-    "firefox"
+    "librewolf"
     "vlc"
     "vncviewer"
     "geeqie"
