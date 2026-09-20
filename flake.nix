@@ -15,11 +15,18 @@
       ...
     }:
     let
+      flags = {
+        includeCLI = true;
+        includeGUI = true;
+        includeBootstrappedNvim = true;
+        includeIntelGPUdrives = false;
+      };
       systems = [
         "x86_64-linux"
         "aarch64-linux"
       ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
+      lib = nixpkgs.lib;
     in
     {
       packages = forAllSystems (
@@ -29,19 +36,20 @@
             inherit system;
             config = { allowUnfree = true; };
           };
-          graphics-drivers = import ./graphics-drivers.nix { inherit pkgs; };
         in
         {
           default = pkgs.buildEnv {
             name = "package env";
             paths =
-              (import ./cli.nix { inherit pkgs; })
-              ++ (import ./gui.nix { inherit pkgs system; })
-              ++ [
+              lib.optionals flags.includeCLI
+                (import ./cli.nix { inherit pkgs; })
+              ++ lib.optionals flags.includeGUI
+                (import ./gui.nix { inherit pkgs system; })
+              ++ lib.optionals flags.includeBootstrappedNvim [
                 edvard-dotfiles.packages.${system}.neovim
-                edvard-dotfiles.packages.${system}.q-cli
               ]
-              # ++ [ graphics-drivers ]
+              ++ lib.optionals flags.includeIntelGPUdrives
+                (import ./graphics-drivers/intel.nix)
               ;
           };
         }

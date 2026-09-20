@@ -1,8 +1,7 @@
 { pkgs }:
 
 with pkgs;
-[ # cli
-  ## coreutils++
+[ ## cli / coreutils++
   file
   fzf
   jq
@@ -12,29 +11,24 @@ with pkgs;
   unzip
   xxd
   smem
-
-  ## utils
+] ++ [ ## utils
   iperf3
   perf
   nmap
   v4l-utils
   unison
-] ++ [
-  # improve shell
+] ++ [ ## improve shell
   zoxide
-] ++ [
-  # git
+] ++ [ ## git
   git
   git-lfs
   lazygit
-] ++ [
-  # tui
+] ++ [ ## tui
   htop
   tree
   ncdu
   lf
   sqlite-interactive
-] ++ [
-  # language tooling
+] ++ [ ## language tooling
   nixfmt-rfc-style
 ]
