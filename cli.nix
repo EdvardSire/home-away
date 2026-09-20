@@ -11,12 +11,14 @@ with pkgs;
   unzip
   xxd
   smem
+  socat
 ] ++ [ ## utils
   iperf3
   perf
   nmap
   v4l-utils
   unison
+  android-tools
 ] ++ [ ## improve shell
   zoxide
 ] ++ [ ## git

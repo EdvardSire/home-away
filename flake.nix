@@ -48,8 +48,9 @@
               ++ lib.optionals flags.includeBootstrappedNvim [
                 edvard-dotfiles.packages.${system}.neovim
               ]
-              ++ lib.optionals flags.includeIntelGPUdrives
-                (import ./graphics-drivers/intel.nix)
+              ++ lib.optionals flags.includeIntelGPUdrives [
+                (import ./graphics-drivers/intel.nix { inherit pkgs; })
+              ]
               ;
           };
         }
