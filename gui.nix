@@ -19,6 +19,7 @@ with pkgs;
   # thunderbird
   librewolf # firefox
   vlc
+  moonlight-qt
   # tigervnc
   # eog
   # binaryninja-free
